@@ -16,10 +16,10 @@ include-before-body:
       breaksymbolleft={},
       breaklines
     }
-output:
-  echo: false
-  eval: false
+execute:
+  echo: true
 ---
+
 
 **Due 02/07 at 5:00PM Central.**
 
@@ -231,13 +231,12 @@ def scrape_enforcement_actions(start_year: int,
 ```
 
 ```{python}
-RUN_SCRAPER = True
-df_actions = scrape_enforcement_actions(2024, 1, run_scraper=RUN_SCRAPER)
+#RUN_SCRAPER = False
+#df_actions = scrape_enforcement_actions(2024, 1, run_scraper=RUN_SCRAPER)
 
 ```
 
 ```{python}
-RUN_SCRAPER = False
 df_actions = pd.read_csv("enforcement_actions_2024_01.csv")
 
 df_actions.head()
@@ -253,13 +252,13 @@ Starting from January 2024, the dynamic scraper collected 1787 enforcement actio
 
 * c. Test Your Code
 
-```{python}
-RUN_SCRAPER = True
-df_2022 = scrape_enforcement_actions(2022, 1, run_scraper=RUN_SCRAPER)
+```{python} 
+
+#RUN_SCRAPER = False
+#df_2022 = scrape_enforcement_actions(2022, 1, run_scraper=RUN_SCRAPER)
 ```
 
 ```{python}
-RUN_SCRAPER = False
 df_2022 = pd.read_csv("enforcement_actions_2022_01.csv")
 ```
 
